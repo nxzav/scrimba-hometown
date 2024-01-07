@@ -1,0 +1,194 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+:root {
+    --space: #22223B;
+    --light-space: #4A4E69;
+    --brown: #9A8C98;
+    --cappuccino: #C9ADA7;
+    --light-cream: #F2E9E4;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#hero {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://biencomun.com/wp-content/uploads/2021/01/chic-magazine.jpg);
+}
+
+.hero-title {
+    background: var(--space);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    box-sizing: border-box;
+    width: min(412px, 95%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background: var(--light-space);
+    text-shadow: 1px 1px 1px #000;
+}
+
+#activities-section {
+    height: 300px;
+    padding: 2rem 1rem 3rem 1rem;
+    background: var(--light-cream);
+}
+
+.activities {
+    margin: 0 auto;
+    max-width: 720px;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 1rem;
+}
+
+.activities-card {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.activities-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px #00000022;
+}
+
+.activities-title {
+    margin: 0 0 2rem 0;
+}
+
+.activities-img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+#guide-section {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--brown);
+}
+
+.guide-card {
+    position: relative;
+    box-sizing: border-box;
+    width: min(95%, 450px);
+    display: flex;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--light-cream);
+    color: #000;
+    box-shadow: 0 8px 10px #00000022, 0 6px var(--light-space);
+    transition: all 0.2s;
+}
+
+.guide-card:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 10px 6px #00000044, 0 6px var(--light-space);
+}
+
+.guide-card-img {
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.guide-card-info {
+    padding: 0 1rem 1rem 1rem;
+}
+
+#food-section {
+    background: var(--light-cream);
+    padding: 1rem 0;
+}
+
+.foods {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+    box-sizing: border-box;
+    justify-content: space-around;
+    width: min(95%, 720px);
+    text-align: left;
+    font-style: italic;
+}
+
+.foods-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center;
+}
+
+#foods-img1 {
+    background-image: url("https://i.pinimg.com/originals/a7/b6/74/a7b67438cba31040aa1becc7f3c6a187.jpg");
+}
+
+#foods-img2 {
+    background-image: url("https://pinchandswirl.com/wp-content/uploads/2023/01/Slow-Cooker-sq.jpg");
+}
+
+#foods-img3 {
+    background-image: url("https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/C07AE049-11C3-4672-A96A-A547C15F0116/Derivates/FE1D05A4-0A44-4007-9A42-5CAFD9F8F798.jpg");
+}
+
+@media (max-width: 720px) {
+    #hero {
+        height: 100vh;
+    }
+    #activities-section {
+        height: auto;
+    }
+    .activities {
+        flex-direction: column;
+    }
+    .activities-card {
+    width: 100%;
+    }
+    .guide-card {
+        box-sizing: border-box;
+        padding: 2rem 0;
+        flex-direction: column;
+    }
+}
